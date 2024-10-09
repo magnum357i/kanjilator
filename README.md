@@ -6,6 +6,8 @@ It's a simple tool that converts audio to text using Whisper AI and Anaconda.
 - Anaconda
 
 ### Usage
+Run the kanjilator shortcut and write this command:
+
 ```kanjilator -file "opening.wav"```
 
 That's all. And, searches for the file on the desktop.
