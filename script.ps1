@@ -7,14 +7,24 @@ Function Kanjilator {
 
     param(
     
-        [Parameter(Mandatory=$false,
+        [Parameter(Position=0, Mandatory=$true,
                 HelpMessage="The name of a audio.")] 
-        [string]$file
+        [string]$file,
+
+        [Parameter(Mandatory=$false,
+                HelpMessage="The lang of a audio.")] 
+        [string]$lang="Japanese",
+
+        [Parameter(Mandatory=$false,
+                HelpMessage="Select a model to use.")] 
+        [string]$model="large",
+
+        [Parameter(Mandatory=$false,
+                HelpMessage="Select a output format to save.")] 
+        [string]$format="txt"
     
     )
 
 
-    whisper "C:\Users\$Env:UserName\Desktop\$file" --language Japanese --model large --output_format txt --output_dir tmp
+    whisper "C:\Users\$Env:UserName\Desktop\$file" --language $lang --model $model --output_format $format --output_dir tmp
 }
-
-
